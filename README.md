@@ -38,4 +38,11 @@ The Algorithm for k-step contrastive divergence is the following:
 
 <img width="620" alt="screen shot 2018-04-01 at 5 59 00 pm" src="https://user-images.githubusercontent.com/34433140/38177987-fb5c387e-35d6-11e8-9b05-49f0f90bc718.png">
 
+- Results
 
+To evaluate the rbm model results I computed the Average Distcance and I end up with a average distance of 0.24 which is equivalent to a 75% of correct predictions. 
+Train/Test loss = the mean of the absolute distances between the predictions and the ratings.
+Train Loss = 0.25 which means that we have 75% of succes.
+Test Loss = 0.24 
+
+# AutoEncoder
