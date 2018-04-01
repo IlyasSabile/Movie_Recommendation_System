@@ -28,17 +28,14 @@ or Run these Commands:
 
 # Restricted Boltzman Machine 
 I built a Recommandation system that predict a binary ratings outcome (1 if the users liked the movie and 0 if not) by training a RBM on the MovieLens dataset that contains 100k ratings from 1000 users on 1700 movies.
-- Approximating the RBM log-Likelihood Gradient
+
+Approximating the RBM log-Likelihood Gradient
 All common training algorithms for RBMs approximate the log-likelihood gradient given some data and perform gradient ascent on these approximations. 
 
-I computed the a K-steps Contrastive Divergence Algorithm to approximate the gradient. 
-a Gibbs chain is run for only k steps (and usually k = 1). The Gibbs chain is initialized with a training example v(0) of the training set and yields the sample v(k) after k steps. Each step t consists of sampling h(t) from p(h|v(t)) and sampling v(t+1) from p(v|h(t)) subsequently. The gradient of the log-likelihood for one training pattern v(0) 
-<img width="578" alt="screen shot 2018-04-01 at 5 55 33 pm" src="https://user-images.githubusercontent.com/34433140/38177964-bad21c60-35d6-11e8-9c9e-045274570360.png">
-is then approximated by
-
-<img width="544" alt="screen shot 2018-04-01 at 5 56 44 pm" src="https://user-images.githubusercontent.com/34433140/38177969-d7f18b32-35d6-11e8-83ae-07d45faa12e8.png">
+I computed a K-steps Contrastive Divergence Algorithm to approximate the gradient where a Gibbs chain is run for only k steps (and usually k = 1). The Gibbs chain is initialized with a training example v(0) of the training set and yields the sample v(k) after k steps. Each step t consists of sampling h(t) from p(h|v(t)) and sampling v(t+1) from p(v|h(t)) subsequently. 
 
 The Algorithm for k-step contrastive divergence is the following: 
+
 <img width="620" alt="screen shot 2018-04-01 at 5 59 00 pm" src="https://user-images.githubusercontent.com/34433140/38177987-fb5c387e-35d6-11e8-9b05-49f0f90bc718.png">
 
 
