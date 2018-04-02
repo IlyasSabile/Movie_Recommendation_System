@@ -49,3 +49,13 @@ Train Loss = 0.25 which means that we have 75% of succes.
 Test Loss = 0.24 
 
 # AutoEncoder
+
+This time the recommender system is predicting the movies ratings from 1 to 5 by training an AutoEncoder on the same MovieLens dataset.  
+
+I created a classe that inheritates from an existant parent class in pytorch called Module. I also used the RMSprop optimizer to reduce the mean square error at each epoch. 
+
+- Results 
+
+Train Loss  = 0.91
+
+Test Loss = 0.95
